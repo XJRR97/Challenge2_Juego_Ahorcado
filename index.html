@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Ahoracado ᚷᚺᚱᚱ</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="logo Gary-modified.png" alt="Logo ᚷᚺᚱᚱ">
+    </header>
+    <main>
+        <div class="div_ganaste">
+            <p>Juego Terminado: Ganaste</p> 
+            <input type="submit" class="btn_ok_tres" value="OK">
+        </div>
+        <div class="div_perdiste">
+            <p>Juego Terminado: Perdiste</p> 
+            <input type="submit" class="btn_ok_cuatro" value="OK">
+        </div>
+        <div class="div_palabra_repetida">
+            <p>Ya has ingresado esta palabra</p> 
+            <input type="submit" class="btn_ok_cinco" value="OK">
+        </div>
+
+        <section class="contenedor">
+            <section class="dibujo_ahorcado">
+                <canvas class="canvas_dibujo" width="340" height="520"> </canvas>
+            </section>
+    
+            <section class="botones_interaccion">
+                <div class="div_palabra">
+                    <textarea name="adivinar_letra" id="adivinar_letra" maxlength="1" placeholder="Ingrese una letra"></textarea>
+                </div>
+                <div class="botones">
+                    <input type="submit" class="aceptar" value="ACEPTAR">
+                        <div class="div_caracter_incorrecto">
+                            <p>No se permite el ingreso de numeros, caracteres especiales y/o acentos</p> 
+                            <input type="submit" class="btn_ok_uno" value="OK">
+                        </div>
+                        <div class="div_campo_vacio">
+                            <p>Este Campo no puede estar vacio, ingrese valores para continuar</p> 
+                            <input type="submit" class="btn_ok_dos" value="OK">
+                        </div>
+                    <input type="submit" class="agregar" value="AGREGAR PALABRA">
+                    <div class="menu_agregar_palabra">
+                        <textarea name="nueva_palabra" id="nueva_palabra" maxlength="20" placeholder="Ingrese Nueva Palabra"></textarea>
+                        <input type="submit" class="confirmar" value="CONFIRMAR">
+                        <input type="submit" class="cancelar" value="CANCELAR">
+                    </div>
+                </div>
+            </section>
+        </section>
+       
+    </main>
+    <footer>
+        <p>&#169; ᚷᚺᚱᚱ 1997</p>
+    </footer>
+    
+</body>
+
+
+
+</html>
+
+<script src="script.js"></script>

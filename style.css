@@ -1,0 +1,270 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    border: 2px solid rgb(7, 133, 155);
+}
+header{
+    width: 100%;
+    height: 100px;
+    background: rgb(20, 14, 14);
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid rgb(7, 133, 155);
+    
+}
+header img{
+   padding: 10px;
+    width: 200px;
+    height: 100%;
+    object-fit: contain; 
+}
+
+main{
+    width: 100%;
+}
+
+.contenedor{
+    display: grid;
+    padding: 12px 0;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "dibujo_ahorcado botones_ahorcado";
+}
+
+.canvas_dibujo{ 
+    border-radius: 12px;
+    padding: 10px;
+}
+
+
+.dibujo_ahorcado{
+grid-area: dibujo_ahorcado;
+display: grid;
+justify-content: center;
+}
+
+.botones_interaccion{
+grid-area: botones_ahorcado;
+display: grid;
+justify-content: center;
+margin: 40px;
+border: 2px solid black;
+border-radius: 15px;
+background: aliceblue;
+}
+
+#adivinar_letra{
+    width: 400px;
+    height: 200px;
+    border: none;
+    resize: none;
+    font-size: 22px;
+    color: black;
+    text-transform: uppercase;
+    background: aliceblue;
+    text-align: center;
+    padding: 10px 0;
+}
+
+#adivinar_letra:focus{
+    outline: none;
+}
+
+::placeholder{
+    font-size: 22px;
+    opacity: 0.8;
+    color: black;
+    font-style: italic;
+}
+.div_palabra{
+    display: flex;
+    align-items: center;
+}
+
+.botones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 22px;
+}
+
+.aceptar, .agregar{
+    width: 150px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.aceptar{
+    background: black;
+    color: aliceblue;
+    border: 2px solid aliceblue;
+    font-weight: bold;
+}
+
+.agregar{
+    background: aliceblue;
+    font-weight: bold;
+    
+}
+
+.menu_agregar_palabra{
+    width: 200px;
+    height: 200px;
+    background: black;
+    position: fixed;
+    border-radius: 12px ;
+    display: none;
+    
+}
+
+.menu_agregar_palabra ::placeholder{
+    font-size: 14px;
+    font-weight: bold;
+    color: aliceblue;
+}
+
+#nueva_palabra{
+    height: 50px;
+    display: grid;
+    margin: 12px auto;
+    border: none;
+    resize: none;
+    background: black;
+}
+
+#nueva_palabra:focus{
+    color: aliceblue;
+    outline: none;
+}
+
+.confirmar, .cancelar{
+    width: 150px;
+    height: 50px;
+    display: grid;
+    margin: 12px auto;
+    font-weight: bold;
+    color: aliceblue;
+    border: 2px solid aliceblue;
+    background: black;
+}
+
+
+.div_caracter_incorrecto, .div_campo_vacio, .div_perdiste, .div_ganaste, .div_palabra_repetida{
+    width: 300px;
+    height: 300px;
+    background-color: black;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    border-radius: 12px;
+}
+/* .div_campo_vacio, .div_perdiste{
+    width: 300px;
+    height: 300px;
+    background-color: black;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    border-radius: 12px;
+} */
+
+.div_caracter_incorrecto p, .div_campo_vacio p, .div_ganaste p, .div_perdiste p, .div_palabra_repetida p{
+    width: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: aliceblue;
+    font-size: 22px;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.div_caracter_incorrecto .btn_ok_uno, .div_campo_vacio .btn_ok_dos, .div_ganaste .btn_ok_tres, .div_perdiste .btn_ok_cuatro, .btn_ok_cinco{
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -30%);
+    width: 80px;
+    height: 40px;
+    border-radius: 12px;
+}
+
+footer{
+    width: 100%;
+    height: 50px;
+    background: rgb(20, 14, 14);
+    border-top: 2px solid rgb(7, 133, 155);
+}
+
+footer p{
+    font-size: 12px;
+    color: aliceblue;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 22px 0 0 0;
+}
+
+/* RESPONSIVE PARA CELULARES */
+@media screen and (min-width:350px) and (max-width:880px){
+    html{
+        width: 100%;
+    }
+    header{
+        width: 100%;
+        height: 100px;
+        background: rgb(20, 14, 14);
+        display: flex;
+        justify-content: center;
+        border-bottom: 2px solid rgb(7, 133, 155);
+        
+    }
+    header img{
+       padding: 10px;
+        width: 200px;
+        height: 100%;
+        object-fit: contain;
+        
+    }
+    
+    main{
+        width: 100%;
+    }
+    
+    .contenedor{
+        display: flex;
+        padding: 12px 0;
+        flex-direction: column-reverse;
+    }
+    
+    .canvas_dibujo{
+        background: white;
+    }
+    
+    .dibujo_ahorcado{
+    
+    display: grid;
+    justify-content: center;
+    }
+    
+    .botones_interaccion{
+    display: grid;
+    /* width: 450px; */
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    justify-content: center;
+    margin: 12px 20px;
+    border: 2px solid black;
+    border-radius: 15px;
+    background: aliceblue;
+    }
+    
+   
+}
